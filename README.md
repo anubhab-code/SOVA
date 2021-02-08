@@ -71,5 +71,4 @@ To use its functionality we need PyAudio (for microphone users)
  
  ## Authors
  
- MNNIT Hackathon - Hack-36 2nd Edition 2k19
  * **Anubhab Swain** [github](https://github.com/anubhab-code/)
