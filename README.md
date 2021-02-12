@@ -23,6 +23,7 @@ speech_recognition
 wave
 BeautifulSoup4
 ```
+
 In case getting some error, install the required module.
 
 ### Healthy Practice : Setting Up a Virtual Environment
@@ -47,8 +48,19 @@ Once you are inside the Scripts folder , ```activate``` the virtual environment 
 Or ```deactivate``` the virtual environment :
 
   ```/venv/Scripts/ > deactivate```
+  
+### Installing directly from ```requirements.txt```
+You can directly install all the required dependencies using the ```requirements.txt``` file in the repository. Run the following command : 
 
-### Installing 
+**Note : If you have decided to use a Virtual Environment for your project , make sure you activate it before running the command given below**
+
+  ```pip install -r requirements.txt```
+  
+The ```requrements.txt``` file in this repository has been created using the latest python version : ```python 3.9.0```
+
+Although backward compatibility is present in python , in case of any error during installation from the ```requirements.txt``` file , you can always install standalone modules separately from the ```Installing modules individually``` section given below .
+
+### Installing modules individually
 
 #### 1. Python
   From here install the latest version of Python for Windows [here](https://www.python.org/downloads/)
