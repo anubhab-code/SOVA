@@ -4,7 +4,7 @@
 
 
 # S.O.V.A.
-S.O.V.A. is my attempt to automate tasks performed on Microsoft Windows. It would help people not familiar with technology to operate computer systems relatively easily. People alien to this domain face difficulties in getting used to technology, S.O.V.A. here serves as a handy tool. S.O.V.A. performs all common tasks like opening applications, opening and closing files and folders, moving, renaming and organizing files, searching for files, compressing and decompressing files, changing system background, switching tabs, accessing utilities like webcam and microphone, shutting down the system etc. It also has additional features like playing music according to mood, reporting errors, etc.   
+S.O.V.A. is our attempt to automate tasks performed on Microsoft Windows. It would help people not familiar with technology to operate computer systems relatively easily. People alien to this domain face difficulties in getting used to technology, S.O.V.A. here serves as a handy tool. S.O.V.A. performs all common tasks like opening applications, opening and closing files and folders, moving, renaming and organizing files, searching for files, compressing and decompressing files, changing system background, switching tabs, accessing utilities like webcam and microphone, shutting down the system etc. It also has additional features like playing music according to mood, reporting errors, etc.   
 
 ## Getting Started
 
@@ -16,14 +16,51 @@ We need to install following libraries and environment before we begin our task.
 ```
 python 3.6 or above
 selenium
+pipwin
+winspeech
 pyaudio
 speech_recognition
 wave
 BeautifulSoup4
 ```
+
 In case getting some error, install the required module.
 
-### Installing 
+### Healthy Practice : Setting Up a Virtual Environment
+In order to avoid collisions during imports and other situations created due to different version requirements for different projects , it is often essential to build / create a virtual environment before trying to install project dependencies. You can easily do this using ```pip``` as :
+  
+  ```pip install venv```
+  
+Once ```venv``` is installed on your computer you can go forward to create a virtual environment for your project by executing the following command :
+
+  ```python -m venv venv```
+  
+This command will create a folder named ```venv``` containing all the necessary scripts . The same folder is also going to store all our dependencies used in the project. Once the virtual environment is setup , you need to activate it . . .
+
+```cd``` into the ```venv``` folder followed by the ```Scripts``` folder. And then use the ```activate``` command inside the ```Scripts``` folder.
+
+  ```python cd venv/Scripts```
+  
+Once you are inside the Scripts folder , ```activate``` the virtual environment :
+  
+  ```/venv/Scripts/ > activate```
+  
+Or ```deactivate``` the virtual environment :
+
+  ```/venv/Scripts/ > deactivate```
+  
+### Installing directly from ```requirements.txt```
+You can directly install all the required dependencies using the ```requirements.txt``` file in the repository. Run the following command : 
+
+**Note : If you have decided to use a Virtual Environment for your project , make sure you activate it before running the command given below**
+
+  ```pip install -r requirements.txt```
+  
+The ```requrements.txt``` file in this repository has been created using the latest python version : ```python 3.9.0```
+
+Although backward compatibility is present in python , in case of any error during installation from the ```requirements.txt``` file , you can always install standalone modules separately from the ```Installing modules individually``` section given below .
+
+### Installing modules individually
 
 #### 1. Python
   From here install the latest version of Python for Windows [here](https://www.python.org/downloads/)
@@ -39,9 +76,19 @@ We will be using Chrome WebDriver , you can download it from [here](https://site
 
 #### 3. Speech Recoginition
 
+In order to use the SpeechRecognition Library for Windows you need to install an additional dependency called winspeech .
+
+  ```pip install winspeech```
+  
+Now we can install the SpeechRecognition library
+
   ```pip install SpeechRecognition```
   
-To use its functionality we need PyAudio (for microphone users)
+To use its functionality we need PyAudio (for microphone users) . For Windows , you once again need to install a system level dependency called ```pipwin```
+
+  ```pip install pipwin```
+  
+Now we continue with our installation of PyAudio
 
   ```pip install pyaudio```
 
@@ -65,10 +112,11 @@ To use its functionality we need PyAudio (for microphone users)
  
  ## Running the tests
  
-  ```python3 main.py```
+  ```python3 main.py``` or ```python main.py```
   
  Enjoy !!!
  
  ## Authors
  
  * **Anubhab Swain** [github](https://github.com/anubhab-code/)
+ * **Ansh Sarkar** [github](https://github.com/ansh-sarkar/)
